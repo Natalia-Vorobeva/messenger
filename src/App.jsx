@@ -5,27 +5,27 @@ import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
-	const formData = new FormData()
-		formData.append('actionName', 'MessagesLoad')
-		formData.append('messageId', 0)
-		const requestOptions = {
-			method: 'POST',
-			body: formData,
-			referrerPolicy: "unsafe-url"
-		}
+	// const formData = new FormData()
+	// 	formData.append('actionName', 'MessagesLoad')
+	// 	formData.append('messageId', 0)
+	// 	const requestOptions = {
+	// 		method: 'POST',
+	// 		body: formData,
+	// 		referrerPolicy: "unsafe-url"
+	// 	}
 
-		useEffect(() => {
-		fetch('http://a0830433.xsph.ru/', requestOptions)
-			.then(response => response.json())
-			.then(
-				(result) => {
-					console.log(result.Messages)
-				},
-				(error) => {
-					console.error('%cDATA', 'color: purple', 'Ошибка при запросе:', error)
-				}
-			)
-	}, [])
+	// 	useEffect(() => {
+	// 	fetch('http://a0830433.xsph.ru/', requestOptions)
+	// 		.then(response => response.json())
+	// 		.then(
+	// 			(result) => {
+	// 				console.log(result.Messages)
+	// 			},
+	// 			(error) => {
+	// 				console.error('%cDATA', 'color: purple', 'Ошибка при запросе:', error)
+	// 			}
+	// 		)
+	// }, [])
 
   return (
     <>
